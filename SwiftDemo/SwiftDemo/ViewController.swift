@@ -9,10 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    typealias SInteger = Int32
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.testLoop()
+        
+    }
+    
+    private func testLoop() {
+        let array = [1,2,3,4,9,6]
+        
+        // forEach
+        array.forEach { (idx) in
+            print("\(idx)")
+        }
+        
+        for (idx,item) in array.enumerate() {
+            print("obj.element: \(item) index: \(idx)")
+        }
+        
+        
+        for i in 1..<5 {
+            NSLog("\(i)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
