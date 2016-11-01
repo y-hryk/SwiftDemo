@@ -15,11 +15,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.testLoop()
+//        self.testLoop()
+        self.testSwitch()
+        
+        
         
     }
     
-    private func testLoop() {
+    fileprivate func testLoop() {
         let array = [1,2,3,4,9,6]
         
         // forEach
@@ -27,13 +30,23 @@ class ViewController: UIViewController {
             print("\(idx)")
         }
         
-        for (idx,item) in array.enumerate() {
+        for (idx,item) in array.enumerated() {
             print("obj.element: \(item) index: \(idx)")
         }
         
         
         for i in 1..<5 {
             NSLog("\(i)")
+        }
+    }
+    
+    fileprivate func testSwitch() {
+        let section = 1
+        switch section {
+        case 1:
+            print("\(section)")
+        default:
+            break
         }
     }
 
