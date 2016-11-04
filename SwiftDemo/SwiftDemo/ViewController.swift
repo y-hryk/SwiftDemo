@@ -20,6 +20,34 @@ class ViewController: UIViewController {
         
         
         
+        // closure
+        let c1 = { () -> () in
+            print(">>>>>> Closure")
+        }
+        
+        c1()
+        
+        let c2 = {
+            print("aaa")
+            print("bbb")
+        } ()
+        
+        
+        typealias myClosure = (Int, Int) -> Double
+        
+        var ca3 = [myClosure]()
+        
+        print(">>>< \(ca3)")
+        
+        
+        let list = ["aaa","bbb"]
+        
+        let source = list.filter() { $0.hasSuffix("aaa") }
+        print("source  \(source)")
+        
+        
+        // generics
+        
     }
     
     fileprivate func testLoop() {
