@@ -8,6 +8,28 @@
 
 import UIKit
 
+
+protocol VectorType {
+    associatedtype Element
+    var x : Element { get set }
+    var y : Element { get set }
+}
+
+struct Vector<T> : VectorType {
+    typealias Element = T
+    var x, y : Element
+}
+
+extension VectorType where Element == Double {
+    func abs() -> Double {
+        return sqrt( x * x + y * y )
+    }
+}
+
+extension Vector where T : FloatingPoint {
+    
+}
+
 class ViewController: UIViewController {
     
     typealias SInteger = Int32
@@ -48,6 +70,20 @@ class ViewController: UIViewController {
         
         // generics
         
+        // 型が推論できない場合はコンパイルエラー
+        let a:[Int?] = f(n: 3)
+        print(">>>> \(a)")
+        
+        let vector: Vector<Int> = Vector(x: 12, y: 3)
+        print("\(vector.x)")
+        
+        let vector_double: Vector<Double> = Vector(x: 12, y: 3)
+        print("\(vector_double.abs())")
+        
+    }
+    
+    fileprivate func f<T>(n: Int) -> [T?] {
+        return [T?](repeating:nil, count:n)
     }
     
     fileprivate func testLoop() {
