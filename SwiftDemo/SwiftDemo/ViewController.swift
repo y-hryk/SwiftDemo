@@ -30,6 +30,13 @@ extension Vector where T : FloatingPoint {
     
 }
 
+protocol Personal {
+    
+    static func test()
+    var name: String { get }
+    
+}
+
 class ViewController: UIViewController {
     
     typealias SInteger = Int32
