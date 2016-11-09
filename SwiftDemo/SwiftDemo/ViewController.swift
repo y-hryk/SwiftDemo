@@ -48,25 +48,41 @@ class ViewController: UIViewController {
         self.testSwitch()
         
         
+        /*
+         *Colosureの省略
+         */
+        let c5: Int = { () -> Int in    // 省略なし
+            return 5
+        } ()
         
-        // closure
+        let c6: Int = { () in           // 型推論で戻り値を省略できる
+            return 5
+        } ()
+        
+        let c7: Int = { return 3 } ()   // 引数と戻り値を省略
+        let c8: Int = { 3 } ()          // 一行なので returnを省力
+
+        // 戻り値がないので変数に入れてから実装できる
         let c1 = { () -> () in
             print(">>>>>> Closure")
         }
         
         c1()
         
-        let c2 = {
+        // 戻り値があるため即時実行しないといけない
+        let c2: Int = {
             print("aaa")
             print("bbb")
+            return 2
         } ()
-        
+
         
         typealias myClosure = (Int, Int) -> Double
         
+        // 配列の型をクロージャーにして空の配列を初期化する
         var ca3 = [myClosure]()
         
-        print(">>>< \(ca3)")
+        print(">>> \(ca3)")
         
         
         let list = ["aaa","bbb"]
