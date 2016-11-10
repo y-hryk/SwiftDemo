@@ -59,6 +59,16 @@ enum Direction: Int {
 }
 
 // 共用型の列挙型
+enum Ticket {
+    case 切手(価格: Int, 大人: Bool, 回数券: Bool)
+    case カード(価格: Int, 大人: Bool)
+    case 敬老パス
+}
+
+enum Status {
+    case Success
+    case Error(code: Int)
+}
 
 
 class Demo3ViewController: UIViewController {
@@ -69,6 +79,18 @@ class Demo3ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let status = Status.Error(code: 400)
+        switch status {
+        case .Success:
+            print("成功")
+        case .Error(code: 400):
+            print("Bad Request")
+        case .Error(code: 500):
+            print("Internal Server Error")
+        default:
+            print("何かのエラー")
+        }
 
         let a = Direction.left
         let b = a.rawValue
@@ -84,6 +106,62 @@ class Demo3ViewController: UIViewController {
         print("\(Direction.count)")
         
         print("\(Direction())")
+        
+        // 共用型のSwitch文
+        
+        let ticket = Ticket.切手(価格: 1000, 大人: false, 回数券: false)
+        
+        switch ticket {
+        case let .切手(fare, _, _):
+            print("価格: \(fare) ")
+        case .カード(let fare, _) where fare < 149:
+            print("カード \(fare)")
+        case .カード(let fare, _) where fare > 150:
+            print("カード \(fare)")
+        case .敬老パス:
+            print("敬老パス")
+//        default:
+//            print("例外")
+        }
+        
+        
+        // パターンマッチ例
+        
+        if case .敬老パス = ticket {
+            
+        }
+        
+        let tickets: [String: Ticket] = ["test1" : .カード(価格: 100, 大人: true),
+                                         "test2" : .カード(価格: 100, 大人: true)]
+        if let t = tickets["test1"], case .カード = t {
+            
+        }
+        
+        if case .カード? = tickets["test1"] {
+            
+        }
+        
+        
+        let passes: [Ticket] = [.カード(価格: 100, 大人: true),.カード(価格: 50, 大人: true)]
+        
+        
+        passes.forEach { (ticket) in
+            if case .カード(let kakaku, _) = ticket , kakaku >= 100 {
+                print(ticket)
+            }
+        }
+        
+        for case .カード(let kakaku, _) in passes where kakaku >= 100 {
+            print(ticket)
+        }
+        
+        
+        switch a {
+        case .up: break
+        case .down: break
+        case .left: break
+        case .right: break
+        }
     }
 
 }
