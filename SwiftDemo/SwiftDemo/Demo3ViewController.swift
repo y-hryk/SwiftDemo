@@ -8,11 +8,17 @@
 
 import UIKit
 
+// 値型の列挙型
 enum Direction: Int {
     case up
     case right
     case down
     case left
+    
+    // イニシャライザも定義可能
+    init() {
+        self = .right
+    }
     
     /* 無名クロージャーで定義
      * static let で定義できるため、初回アクセス時のみループが走り
@@ -52,6 +58,9 @@ enum Direction: Int {
     }
 }
 
+// 共用型の列挙型
+
+
 class Demo3ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +82,8 @@ class Demo3ViewController: UIViewController {
 
         print("\(Direction.count)")
         print("\(Direction.count)")
+        
+        print("\(Direction())")
     }
 
 }
