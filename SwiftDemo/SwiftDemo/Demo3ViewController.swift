@@ -162,6 +162,19 @@ class Demo3ViewController: UIViewController {
         case .left: break
         case .right: break
         }
+        
+        
+        var nagano = 1988
+        if nagano < 2000, let tokyo = Int("2020") , tokyo > 2000 {
+            
+        }
+        
+        let itemCount: Int? = 12
+        
+        guard let itemCount2 = itemCount , itemCount2 > 0 else {
+            return
+        }
+        
     }
 
 }
