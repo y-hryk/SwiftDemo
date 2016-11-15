@@ -11,7 +11,11 @@ import UIKit
 // すべてのプロパティが初期化されている必要あり
 struct Time {
     let in24h: Bool
-    var hour = 0
+    var hour = 0 {
+        didSet {
+            
+        }
+    }
     
 //    init() {
 //        in24h = false
