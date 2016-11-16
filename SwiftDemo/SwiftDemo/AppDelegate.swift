@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         
-        let vc = Demo3ViewController()
+        let vc = Demo4ViewController()
         let navi = UINavigationController(rootViewController: vc)
         window?.rootViewController = navi
       

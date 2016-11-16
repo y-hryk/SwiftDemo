@@ -14,6 +14,7 @@
 		D09725AD1D6E00800000204F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09725AC1D6E00800000204F /* Assets.xcassets */; };
 		D09725B01D6E00800000204F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09725AE1D6E00800000204F /* LaunchScreen.storyboard */; };
 		D09725B81D6EACD20000204F /* CircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09725B71D6EACD20000204F /* CircleLayer.swift */; };
+		D0B1CCDC1DDBF7350031BBAA /* Demo4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1CCDB1DDBF7350031BBAA /* Demo4ViewController.swift */; };
 		D0FC6C9F1DD31C6900DB2E6F /* Demo3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC6C9E1DD31C6900DB2E6F /* Demo3ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		D09725AF1D6E00800000204F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09725B11D6E00800000204F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D09725B71D6EACD20000204F /* CircleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayer.swift; sourceTree = "<group>"; };
+		D0B1CCDB1DDBF7350031BBAA /* Demo4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo4ViewController.swift; sourceTree = "<group>"; };
 		D0FC6C9E1DD31C6900DB2E6F /* Demo3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,12 +83,21 @@
 				D0FC6C9D1DD31C5700DB2E6F /* Enum */,
 				D03E42501DD2CE7700677715 /* Struct */,
 				D03E424D1DD1C9CD00677715 /* Error */,
+				D0B1CCDA1DDBF6FC0031BBAA /* map */,
 				D09725B71D6EACD20000204F /* CircleLayer.swift */,
 				D09725AC1D6E00800000204F /* Assets.xcassets */,
 				D09725AE1D6E00800000204F /* LaunchScreen.storyboard */,
 				D09725B11D6E00800000204F /* Info.plist */,
 			);
 			path = SwiftDemo;
+			sourceTree = "<group>";
+		};
+		D0B1CCDA1DDBF6FC0031BBAA /* map */ = {
+			isa = PBXGroup;
+			children = (
+				D0B1CCDB1DDBF7350031BBAA /* Demo4ViewController.swift */,
+			);
+			name = map;
 			sourceTree = "<group>";
 		};
 		D0FC6C9D1DD31C5700DB2E6F /* Enum */ = {
@@ -170,6 +181,7 @@
 			files = (
 				D03E424F1DD2CE7200677715 /* Demo2ViewController.swift in Sources */,
 				D0FC6C9F1DD31C6900DB2E6F /* Demo3ViewController.swift in Sources */,
+				D0B1CCDC1DDBF7350031BBAA /* Demo4ViewController.swift in Sources */,
 				D09725A81D6E00800000204F /* ViewController.swift in Sources */,
 				D03E424C1DD1C9C800677715 /* Demo1ViewController.swift in Sources */,
 				D09725B81D6EACD20000204F /* CircleLayer.swift in Sources */,
